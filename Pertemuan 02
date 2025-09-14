@@ -1,0 +1,210 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNgH8Y0y5ta6rGxgAiogEk6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/WahyuMuhammadFaqih/Pemograman-dasar-/blob/main/Pertemuan%2002\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#mengakses nilai tipe dictionary\n",
+        "mahasiswa = {\"nama\": \"wahyu\", \"umur\": 19, \"prodi\": \"TRPE\"} # \"nama\",\"umur\",\"prodi\" sebagai key\n",
+        "print(mahasiswa [\"prodi\"]) #akses value dengan key \"prodi\"-> \"TRPE\"\n",
+        "\n",
+        "#mengakses nilai tipe list\n",
+        "mahasiswa = [\"wahyu\", 19 ,\"TRPE\"] # indeksnya berurutan dimulai dari 0 =\"wahyu\", 1 = 19, 2 = \"TRPE\"\n",
+        "print(mahasiswa[2]) # akses value ketiga -> \"TRPE\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h90pjKlhBgG1",
+        "outputId": "8944d5b7-3053-4657-efbf-856d0111c1dd"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "TRPE\n",
+            "TRPE\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 19,
+      "metadata": {
+        "id": "yA4MMZ0HkrPT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "81b564d0-e178-4dd5-997c-f6df88299ad2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Wahyu muhammad faqih', 19, 'Elektro', 'Teknologi rekayasa pembangkit energi', 3, False]\n",
+            "Wahyu muhammad faqih\n",
+            "19\n",
+            "Elektro\n",
+            "Teknologi rekayasa pembangkit energi\n",
+            "3\n",
+            "False\n",
+            "('Wahyu muhammad faqih', 19, 'Elektro', 'Teknologi rekayasa pembangkit energi', 3, False)\n",
+            "Wahyu muhammad faqih\n",
+            "19\n",
+            "Elektro\n",
+            "Teknologi rekayasa pembangkit energi\n",
+            "3\n",
+            "False\n",
+            "{False, 3, 19, 'Wahyu muhammad faqih', 'Teknologi rekayasa pembangkit energi', 'Elektro'}\n",
+            "False\n",
+            "3\n",
+            "19\n",
+            "Wahyu muhammad faqih\n",
+            "Teknologi rekayasa pembangkit energi\n",
+            "Elektro\n",
+            "{'nama': 'Wahyu muhammad faqih', 'umur': 19, 'jurusan': 'Elektro', 'prodi': 'Teknologi rekayasa pembangkit energi', 'semester': 3, 'status_lulus': False}\n",
+            "Wahyu muhammad faqih\n",
+            "19\n",
+            "Elektro\n",
+            "Teknologi rekayasa pembangkit energi\n",
+            "3\n",
+            "False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# program sederhana biodata dengan tipe data non primitif (list,tuple,set,dict)\n",
+        "#===============================================================================\n",
+        "\n",
+        "# Biodata yang dipakai\n",
+        "nama = \"Wahyu muhammad faqih\"\n",
+        "umur = 19\n",
+        "jurusan = \"Elektro\"\n",
+        "prodi = \"Teknologi rekayasa pembangkit energi\"\n",
+        "semester = 3\n",
+        "status_lulus = False\n",
+        "\n",
+        "# tipe List\n",
+        "biodata_list = [\"Wahyu muhammad faqih\", 19, \"Elektro\", \"Teknologi rekayasa pembangkit energi\", 3, False]\n",
+        "#print langsung semua\n",
+        "print(biodata_list)\n",
+        "#print salah satu\n",
+        "print(biodata_list[0])\n",
+        "print(biodata_list[1])\n",
+        "print(biodata_list[2])\n",
+        "print(biodata_list[3])\n",
+        "print(biodata_list[4])\n",
+        "print(biodata_list[5])\n",
+        "\n",
+        "#tipe Tuple\n",
+        "biodata_tuple = (\"Wahyu muhammad faqih\", 19, \"Elektro\", \"Teknologi rekayasa pembangkit energi\", 3, False)\n",
+        "#print langsung semua\n",
+        "print(biodata_tuple)\n",
+        "#print salah satu\n",
+        "print(biodata_tuple[0])\n",
+        "print(biodata_tuple[1])\n",
+        "print(biodata_tuple[2])\n",
+        "print(biodata_tuple[3])\n",
+        "print(biodata_tuple[4])\n",
+        "print(biodata_tuple[5])\n",
+        "\n",
+        "#tipe set\n",
+        "biodata_set = {\"Wahyu muhammad faqih\", 19, \"Elektro\", \"Teknologi rekayasa pembangkit energi\", 3, False}\n",
+        "#print langsung semua (teracak)\n",
+        "print(biodata_set)\n",
+        "#loop print satu per satu (teracak)\n",
+        "for data in biodata_set:\n",
+        "  print(data)\n",
+        "\n",
+        "#tipe dictionary\n",
+        "biodata_dictionary = {\"nama\": \"Wahyu muhammad faqih\", \"umur\": 19, \"jurusan\": \"Elektro\", \"prodi\": \"Teknologi rekayasa pembangkit energi\", \"semester\": 3, \"status_lulus\": False}\n",
+        "#print langsung semua\n",
+        "print(biodata_dictionary)\n",
+        "#print satu per satu\n",
+        "print(biodata_dictionary[\"nama\"])\n",
+        "print(biodata_dictionary[\"umur\"])\n",
+        "print(biodata_dictionary[\"jurusan\"])\n",
+        "print(biodata_dictionary[\"prodi\"])\n",
+        "print(biodata_dictionary[\"semester\"])\n",
+        "print(biodata_dictionary[\"status_lulus\"])\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#program sederhana dengan menerapkan konsep annonation\n",
+        "\n",
+        "nama: str = \"Wahyu muhammad faqih\"\n",
+        "umur: int = 19\n",
+        "tinggi_badan: float = 175.0 #cm\n",
+        "jurusan: str = \"Elektro\"\n",
+        "prodi: str = \"Teknologi rekayasa pembbangkit energi\"\n",
+        "semester: int = 3\n",
+        "status_lulus: bool = False\n",
+        "\n",
+        "print(\"BIODATA MAHASISWA\")\n",
+        "print(\"nama          :\",nama)\n",
+        "print(\"umur          :\",umur,\"tahun\")\n",
+        "print(\"tinggi badan  :\",tinggi_badan,\"cm\")\n",
+        "print(\"jurusan       :\",jurusan)\n",
+        "print(\"prodi         :\",prodi)\n",
+        "print(\"semester      :\",semester)\n",
+        "print(\"status lulus  :\",status_lulus)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uprHdFyeGT2w",
+        "outputId": "3f67f9ba-72f6-4373-b213-d7c6db98623d"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "BIODATA MAHASISWA\n",
+            "nama          : Wahyu muhammad faqih\n",
+            "umur          : 19 tahun\n",
+            "tinggi badan  : 175.0 cm\n",
+            "jurusan       : Elektro\n",
+            "prodi         : Teknologi rekayasa pembbangkit energi\n",
+            "semester      : 3\n",
+            "status lulus  : False\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
