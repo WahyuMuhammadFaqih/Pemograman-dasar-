@@ -1,0 +1,776 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNtRs4NNnxjsw7xAsPdpyVL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/WahyuMuhammadFaqih/Pemograman-dasar-/blob/main/pertemuan%2002\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# tipe data : list\n",
+        "#-----------------\n",
+        "# deklarasi variabel list\n",
+        "numbers = [23, 43, 15, 34]\n",
+        "\n",
+        "# mengakses elemen dalam variabel list\n",
+        "numbers[0] # 23\n",
+        "numbers[1] # 43\n",
+        "numbers[2] # 15\n",
+        "numbers[3] # 34\n",
+        "\n",
+        "# mengubah nilai elemen dalam variabel list\n",
+        "numbers[2] # 51\n",
+        "numbers[2] = 51\n",
+        "\n",
+        "# print untuk setiap indexnya dan lihat hasilnya\n",
+        "print (numbers[0])\n",
+        "print (numbers[1])\n",
+        "print (numbers[2])\n",
+        "print (numbers[3])"
+      ],
+      "metadata": {
+        "id": "8vRkqu3sptYS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e16a6bb0-f035-4e09-93c1-7aae2094d77b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "23\n",
+            "43\n",
+            "51\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel list numbers\n",
+        "numbers = [1, 2, 3]\n",
+        "\n",
+        "# menambahkan elemen di indeks ke-4\n",
+        "numbers.insert(4, 5) # [1, 2, 3, 5]\n",
+        "print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cxIQhW_Iy7vO",
+        "outputId": "afaa2a73-ca59-45b1-f463-d9ddd9e782ae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel list numbers\n",
+        "numbers = [1, 2, 3, 5]\n",
+        "\n",
+        "# mengubah elemen di indeks ke-4\n",
+        "numbers[3] = 4 # [1, 2, 3, 4]\n",
+        "print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PNJKedDR60Df",
+        "outputId": "d7365bc1-e0b8-4f80-dab4-d2ed027b4792"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel list numbers\n",
+        "numbers = [1, 2, 3, 4]\n",
+        "\n",
+        "# menghapus elemen di indeks ke-2\n",
+        "numbers.pop(2) # [1, 2, 4]\n",
+        "print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ALZ0IFEiCHDi",
+        "outputId": "b692d969-723d-4c77-d522-28e243b5f50b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel list\n",
+        "mylist = [1, \"Rumah\", 4.5, True, [\"Kamar mandi\", \"Kamar tidur\"]]\n",
+        "\n",
+        "# mengakses elemen dalam variabel list\n",
+        "mylist[0] # 1\n",
+        "mylist[1] # \"Rumah\"\n",
+        "mylist[3] # True\n",
+        "mylist[4] # [\"Kamar mandi\",\"Kamar tidur\"]\n",
+        "\n",
+        "# mengakses elemen dalam sublist\n",
+        "mylist[4][0] # \"Kamar mandi\"\n",
+        "mylist[4][1] # \"Kamar tidur\"\n",
+        "\n",
+        "# lakukan print lalu amati hasilnya\n",
+        "print(mylist[0])\n",
+        "print(mylist[1])\n",
+        "print(mylist[3])\n",
+        "print(mylist[4])\n",
+        "\n",
+        "print(mylist[4][0])\n",
+        "print(mylist[4][1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fz5223byCfMM",
+        "outputId": "ac5e52fb-ed5f-4a7d-af6f-aa64c119c353"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "Rumah\n",
+            "True\n",
+            "['Kamar mandi', 'Kamar tidur']\n",
+            "Kamar mandi\n",
+            "Kamar tidur\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#slicing list\n",
+        "x = [\"laptop\", \"monitor\", \"mouse\", \"mousepad\", \"keyboard\", \"webcam\", \"microphone\"]\n",
+        "\n",
+        "print(x[0:5:2])\n",
+        "print(x[1:])\n",
+        "print(x[:3])\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B0BOiuK6FVzS",
+        "outputId": "02a66db8-99a3-4858-d711-04ce8c1a3944"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['laptop', 'mouse', 'keyboard']\n",
+            "['monitor', 'mouse', 'mousepad', 'keyboard', 'webcam', 'microphone']\n",
+            "['laptop', 'monitor', 'mouse']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# tipe data : tuple\n",
+        "# -------------------------\n",
+        "\n",
+        "x = (1, \"Polibatam\", 1+3j)\n",
+        "print(type(x))\n",
+        "\n",
+        "# indekxing tuple\n",
+        "x = (5, 'program', 1+3j)\n",
+        "print(x[1])\n",
+        "print(x[0:3])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UCnjaX2YFzLp",
+        "outputId": "cfafeca8-205e-420a-ed1a-c3717fb70fb0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'tuple'>\n",
+            "program\n",
+            "(5, 'program', (1+3j))\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Immutable Tuple\n",
+        "\n",
+        "x = (5, 'program', 1+3j)\n",
+        "x [1] = 'Polibatam'\n",
+        "\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 211
+        },
+        "id": "xGixh_7mIhz0",
+        "outputId": "4226d837-77ac-45c2-b0e5-1c365790eb7e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-979611525.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0mx\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'program'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0;36m3j\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 4\u001b[0;31m \u001b[0mx\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'Polibatam'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mx\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel tuple\n",
+        "numbers = (23, 43, 15, 34)\n",
+        "\n",
+        "# cara mengakses elemen dalam variabel tuple\n",
+        "numbers[0] # 23\n",
+        "numbers[1] # 43\n",
+        "numbers[2] # 15\n",
+        "\n",
+        "#lakukan print lalu amati hasilnya\n",
+        "print(numbers[0])\n",
+        "print(numbers[1])\n",
+        "print(numbers[2])"
+      ],
+      "metadata": {
+        "id": "A5Gf4WIuVNWE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d711745f-d730-48b2-ff1d-2e170c0085a2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "23\n",
+            "43\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# tipe data : set\n",
+        "# -------------------------------\n",
+        "\n",
+        "# deklarasi variabel set a dan b\n",
+        "a = {1, 2, 3}\n",
+        "b = {2, 3, 4}\n",
+        "\n",
+        "# operasi gabungan\n",
+        "a.union(b) # {1, 2, 3, 4}\n",
+        "\n",
+        "# operasi irisan\n",
+        "a.intersection(b) # {2, 3}\n",
+        "\n",
+        "# operasi perbedaan\n",
+        "a.symmetric_difference(b) # {1, 4}\n",
+        "\n",
+        "#lakukan print dan lihat hasilnya\n",
+        "print(a.union(b))\n",
+        "print(a.intersection(b))\n",
+        "print(a.symmetric_difference(b))"
+      ],
+      "metadata": {
+        "id": "y-I4zmDraKS3",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "715d1633-1c0f-41cc-b8a5-1cfee60886c7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{1, 2, 3, 4}\n",
+            "{2, 3}\n",
+            "{1, 4}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tipe data : Dictionary\n",
+        "\n",
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "print(type(x))"
+      ],
+      "metadata": {
+        "id": "dwqYT5LbgyY8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c6590bb4-6707-4c1e-ce07-7caf89322739"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'dict'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "print(x[0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 158
+        },
+        "id": "p4uuB60Iab4p",
+        "outputId": "dd0f6dbb-1eb5-454a-ec9a-67a58e7a3801"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyError",
+          "evalue": "0",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m                                  Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-2527467595.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mx\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m{\u001b[0m \u001b[0;34m'name'\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;34m'Perseus Evans'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'age'\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;36m20\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'isMarried'\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0;32mFalse\u001b[0m \u001b[0;34m}\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mx\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m0\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mKeyError\u001b[0m: 0"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "print(x['name'])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WW592oJwaak0",
+        "outputId": "23a1372c-a5aa-48b0-ff7c-41d7cbdfd264"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Perseus Evans\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# menambah data\n",
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "x['Job'] = \"Web Developer\"\n",
+        "\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "id": "vw3d6J6Igy4K",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ba4e4ce0-f521-447d-c405-17b34baef2ed"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Perseus Evans', 'age': 20, 'isMarried': False, 'Job': 'Web Developer'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# menghapus data\n",
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "del x['isMarried']\n",
+        "\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nHi1jnr-RYHn",
+        "outputId": "ae5c0e84-7bb8-415d-ed27-bb40bda2fd83"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Perseus Evans', 'age': 20}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# mengubah data\n",
+        "x = { 'name': 'Perseus Evans', 'age': 20, 'isMarried': False }\n",
+        "x['name'] = \"Exvan\"\n",
+        "\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dGWBLvx0Ran6",
+        "outputId": "7826f43a-c095-4d22-82ff-8fe51847bb50"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'name': 'Exvan', 'age': 20, 'isMarried': False}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# deklarasi variabel dictionary\n",
+        "propertyDetail = {\"numFloors\": 1, \"propertyType\": \"Rumah\", \"hasTerrace\": True, \"hasGarage\": False}\n",
+        "\n",
+        "# mengakses elemen dalam variabel dictionary\n",
+        "propertyDetail[\"numFloors\"] # 1\n",
+        "propertyDetail[\"propertyType\"] # Rumah\n",
+        "propertyDetail[\"hasTerrace\"] # True\n",
+        "propertyDetail[\"hasGarage\"] # False\n",
+        "\n",
+        "# mengubah nilai elemen dalam variabel dictionary\n",
+        "propertyDetail[\"hasTerrace\"] = False\n",
+        "\n",
+        "propertyDetail[\"hasTerrace\"] # False\n",
+        "\n",
+        "#print(propertyDetail[\"propertyType\"])\n",
+        "\n",
+        "#lakukan print lalu amati hasilnya\n",
+        "print(propertyDetail[\"numFloors\"])\n",
+        "print(propertyDetail[\"propertyType\"])\n",
+        "print(propertyDetail[\"hasTerrace\"])\n",
+        "print(propertyDetail[\"hasGarage\"])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YYbkVT10R8Ki",
+        "outputId": "f4539587-b9c3-462a-90cd-d1df1a365486"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "Rumah\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tugas\n",
+        "\n",
+        "firstName = \"Wahyu\"\n",
+        "lastName = \"muhammad faqih\"\n",
+        "age = 20\n",
+        "isMarried = False\n",
+        "\n",
+        "print(firstName, lastName, age, isMarried)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5_lGEoKWhx36",
+        "outputId": "1110d2b0-20ab-452f-9bfd-47ee0055f086"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Wahyu muhammad faqih 20 False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tugas\n",
+        "\n",
+        "data_diri = {\n",
+        "    \"firstName\":\"wahyu\",\n",
+        "    \"lastName\":\"muhammad faqih\",\n",
+        "    \"age\":19,\n",
+        "    \"isMarried\":False}\n",
+        "print(data_diri)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Sz936A_Tve-",
+        "outputId": "6c8d1dea-8140-42fc-dd16-94c9ef69782c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'firstName': 'wahyu', 'lastName': 'muhammad faqih', 'age': 19, 'isMarried': False}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tugas\n",
+        "\n",
+        "inspeksi = [\n",
+        "    \"pemahaman terhadap rencana dan desain\",\n",
+        "    \"ketersediaan bahan dan peralatan\",\n",
+        "    \"pengawasan pekerjaan\",\n",
+        "    \"kualitas konstruksi\",\n",
+        "    \"keselamatan kerja\",\n",
+        "    \"koordinasi dengan pemilik proyek\",\n",
+        "    ]\n",
+        "\n",
+        "print(inspeksi)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PkjNUqyC-Dtu",
+        "outputId": "7dcce09d-b86a-44d7-dde1-213fcb88c522"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['pemahaman terhadap rencana dan desain', 'ketersediaan bahan dan peralatan', 'pengawasan pekerjaan', 'kualitas konstruksi', 'keselamatan kerja', 'koordinasi dengan pemilik proyek']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tugas\n",
+        "\n",
+        "# waktu datang\n",
+        "startTime = {\n",
+        "    \"HH\": 9,\n",
+        "    \"mm\": 23,\n",
+        "    \"ss\": 57,\n",
+        "}\n",
+        "\n",
+        "# waktu pulang\n",
+        "endTime = {\n",
+        "    \"HH\": 15,\n",
+        "    \"mm\": 25,\n",
+        "    \"ss\": 43\n",
+        "}\n",
+        "\n",
+        "# mengecek hasil dengan print\n",
+        "print(\"waktu datang:\",startTime)\n",
+        "print(\"waktu pulang:\",endTime)"
+      ],
+      "metadata": {
+        "id": "2_Fj8A_1_tBs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "da8d5608-2484-41bf-e9dd-6472a8670819"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "waktu datang: {'HH': 9, 'mm': 23, 'ss': 57}\n",
+            "waktu pulang: {'HH': 15, 'mm': 25, 'ss': 43}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Tugas\n",
+        "\n",
+        "# Katalog produk pemasok A\n",
+        "katalog_A = {\"dumbell\", \"barbel\", \"handgrip\", \"matras\", \"pull up bar\"}\n",
+        "\n",
+        "# katalog produk pemasok B\n",
+        "katalog_B = {\"whey protein\", \"creatine\", \"protein bar\", \"dumbell\"}\n",
+        "\n",
+        "# daftar produk yang lagi diskon\n",
+        "produk_diskon = (\"handgrip\", \"matras\", \"whey protein\")\n",
+        "\n",
+        "# 1.gabungkan katalog_A dan katalog_B ke dalam katalog_lengkap\n",
+        "katalog_lengkap = katalog_A.union(katalog_B)\n",
+        "\n",
+        "# 2.Cari produk yang ada di katalog_lengkap dan yang ada di produk_diskon simpan hasilnya dalam variabel 'produk_promo_aktif'\n",
+        "# (gunakan operasi 'intesection' pada set)\n",
+        "produk_promo_aktif = katalog_lengkap.intersection(produk_diskon)\n",
+        "\n",
+        "# print lalu amati hasilnya\n",
+        "print(\"katalog A:\",katalog_A)\n",
+        "print(\"katalog B:\",katalog_B)\n",
+        "print(\"katalog lengkap:\",katalog_lengkap)\n",
+        "print(\"produk diskon:\",produk_diskon)\n",
+        "print(\"produk promo aktif:\",produk_promo_aktif)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sF1pJUaesQCX",
+        "outputId": "18a95074-e4ca-43ea-870c-271b36d505eb"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "katalog A: {'barbel', 'handgrip', 'dumbell', 'matras', 'pull up bar'}\n",
+            "katalog B: {'dumbell', 'whey protein', 'creatine', 'protein bar'}\n",
+            "katalog lengkap: {'creatine', 'barbel', 'dumbell', 'matras', 'protein bar', 'handgrip', 'whey protein', 'pull up bar'}\n",
+            "produk diskon: ('handgrip', 'matras', 'whey protein')\n",
+            "produk promo aktif: {'handgrip', 'matras', 'whey protein'}\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
