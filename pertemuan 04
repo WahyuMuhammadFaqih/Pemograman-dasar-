@@ -1,0 +1,640 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPV055dhldyojyIN4vyQVJa",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/WahyuMuhammadFaqih/Pemograman-dasar-/blob/main/pertemuan%2004\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DC29FAfL6f2Z",
+        "outputId": "cc1a4381-830c-406d-8882-e21bc7669aeb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Pengunjung adalah orang dewasa.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# contoh penggunaan if tunggal\n",
+        "\n",
+        "umur: int = 20\n",
+        "\n",
+        "if umur > 17:\n",
+        "    print(\"Pengunjung adalah orang dewasa.\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if tunggal\n",
+        "\n",
+        "username = input(\"Masukkan username: \")\n",
+        "password = input(\"Masukkan password: \")\n",
+        "\n",
+        "if username == \"faqih\" and password == \"4321\":\n",
+        "    print(\"Login berhasil\")\n",
+        "else:\n",
+        "    print(\"Login gagal\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ccbb5VrZ-Xls",
+        "outputId": "f5c9f6ba-4a1b-400d-ec0d-b6d3751e8f51"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan username: wahyu\n",
+            "Masukkan password: 1234\n",
+            "Login gagal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if tunggal\n",
+        "\n",
+        "total_belanja = input(\"Total belanja: Rp \")\n",
+        "bayar = int(total_belanja)\n",
+        "\n",
+        "if int(total_belanja) > 100000:\n",
+        "    print(\"Selamat Karena Belanja > Rp. 100.000 anda mendapat Voucher Makan\")\n",
+        "    print(\"dan diskon 5%\")\n",
+        "    diskon = int(total_belanja) * 5 / 100\n",
+        "    bayar = int(total_belanja) - diskon\n",
+        "\n",
+        "print(\"Total yang harus dibayar: Rp %s\" % bayar)\n",
+        "print(\"Terima kasih sudah berbelanja di Toko Kami\")\n",
+        "print(\"Kami tunggu kunjungan anda selanjutnya.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q8fK8Jva_H0B",
+        "outputId": "26f3f378-514c-4ad7-e18d-ec26bf382207"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total belanja: Rp 90000\n",
+            "Total yang harus dibayar: Rp 90000\n",
+            "Terima kasih sudah berbelanja di Toko Kami\n",
+            "Kami tunggu kunjungan anda selanjutnya.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if tunggal\n",
+        "\n",
+        "ada_notifikasi_baru: bool = True\n",
+        "\n",
+        "if ada_notifikasi_baru:\n",
+        "    print(\"Anda memiliki pesan baru!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DK8mOFtf_Ox4",
+        "outputId": "3f17e622-ee84-4061-d361-e5b7ca7cf51d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Anda memiliki pesan baru!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan percabangan ganda\n",
+        "\n",
+        "umur = input(\"Berapa umur kamu: \")\n",
+        "if int(umur) >= 17:\n",
+        "    print(\"Kamu boleh membuat KTP\")\n",
+        "else:\n",
+        "    print(\"Kamu belum boleh membuat KTP\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZojxDbJP_oJq",
+        "outputId": "c128bb26-4e25-48f9-e043-9dd4944322e3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Berapa umur kamu: 15\n",
+            "Kamu belum boleh membuat KTP\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan percabangan ganda\n",
+        "\n",
+        "angka = int(input(\"Masukkan bilangan: \"))\n",
+        "\n",
+        "if angka % 2 == 0:\n",
+        "    print(\"Bilangan Genap\")\n",
+        "else:\n",
+        "    print(\"Bilangan Ganjil\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wbXXPWdYM704",
+        "outputId": "7857e308-c565-4ddf-de1a-681118e2bffc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan bilangan: 5\n",
+            "Bilangan Ganjil\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan percabangan ganda\n",
+        "\n",
+        "total_belanja = 150000  # asumsi total belanja di atas 200.000\n",
+        "\n",
+        "if total_belanja > 200000:\n",
+        "    diskon = total_belanja * 0.10\n",
+        "    total_bayar = total_belanja - diskon\n",
+        "    print(f\"Anda mendapat diskon! Total bayar: Rp {total_bayar}\")\n",
+        "else:\n",
+        "    print(f\"Total bayar: Rp {total_belanja}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I9GxD4NTNa33",
+        "outputId": "ab4ceee7-15b2-4732-a472-2558fc6e3c44"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Total bayar: Rp 150000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if majemuk\n",
+        "\n",
+        "nilai = 60\n",
+        "if nilai >= 85:\n",
+        "    print(\"Luar biasa! Nilai A\")\n",
+        "elif nilai >= 70:\n",
+        "    print(\"Bagus! Nilai B\")\n",
+        "elif nilai >= 60:\n",
+        "    print(\"Cukup. Nilai C\")\n",
+        "else:\n",
+        "    print(\"Nilai kurang, perlu belajar lebih giat.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ME_YYo6ANyu9",
+        "outputId": "fdbb2a49-4185-4869-b46a-61f30bd261eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cukup. Nilai C\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if majemuk\n",
+        "\n",
+        "hari: str = \"Senin\"\n",
+        "if hari == \"Sabtu\" or hari == \"Minggu\":\n",
+        "    diskon: float = 0.20  # Diskon 20%\n",
+        "    print(f\"Selamat! Anda mendapat diskon akhir pekan sebesar {diskon*100}%.\")\n",
+        "elif hari == \"Jumat\":\n",
+        "    diskon: float = 0.15  # Diskon 15%\n",
+        "    print(f\"Diskon spesial Jumat! Anda mendapat potongan {diskon*100}%.\")\n",
+        "else:\n",
+        "    diskon: float = 0.05  # Diskon 5%\n",
+        "    print(f\"Anda mendapat diskon hari biasa sebesar {diskon*100}%.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e9f0e477-208f-458b-b9d6-0b3f7666dc1b",
+        "id": "MiX-IUtVOscx"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Anda mendapat diskon hari biasa sebesar 5.0%.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh penggunaan if majemuk\n",
+        "\n",
+        "rupiah = int(input(\"Masukkan jumlah uang (Rp): \"))\n",
+        "print(\"1. Dollar (USD)\")\n",
+        "print(\"2. Euro (EUR)\")\n",
+        "print(\"3. Yen (JPY)\")\n",
+        "pilih = int(input(\"Pilih konversi (1/2/3): \"))\n",
+        "\n",
+        "if pilih == 1:\n",
+        "    print(\"Dalam Dollar:\", rupiah / 15000)\n",
+        "elif pilih == 2:\n",
+        "    print(\"Dalam Euro:\", rupiah / 16000)\n",
+        "elif pilih == 3:\n",
+        "    print(\"Dalam Yen:\", rupiah / 120)\n",
+        "else:\n",
+        "    print(\"Pilihan tidak valid\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JZlmtPpMOnPU",
+        "outputId": "cd8b13b7-28ed-4ceb-9393-c695824958fe"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan jumlah uang (Rp): 30000\n",
+            "1. Dollar (USD)\n",
+            "2. Euro (EUR)\n",
+            "3. Yen (JPY)\n",
+            "Pilih konversi (1/2/3): 3\n",
+            "Dalam Yen: 250.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# latihan nomor 1\n",
+        "\n",
+        "angka = int(input(\"Masukkan sebuah angka: \"))\n",
+        "if angka % 5 == 0:\n",
+        "    print(\"Kelipatan 5\")\n",
+        "else:\n",
+        "    print(\"Bukan kelipatan 5\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KIQsIlsuQT_7",
+        "outputId": "55ed37c7-ebea-438c-91bd-3407209ec4cf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan sebuah angka: 22\n",
+            "Bukan kelipatan 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# latihan nomor 2\n",
+        "\n",
+        "tahun = int(input(\"Masukkan tahun: \"))\n",
+        "if tahun % 400 == 0:\n",
+        "    print(\"Tahun Kabisat\")\n",
+        "elif tahun % 4 == 0 and tahun % 100 != 0:\n",
+        "    print(\"Tahun Kabisat\")\n",
+        "else:\n",
+        "    print(\"Bukan Tahun Kabisat\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "elP0YBGnRO-W",
+        "outputId": "d69e4320-de0e-44fd-9b22-4525bf9b9e76"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan tahun: 2008\n",
+            "Tahun Kabisat\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# latihan nomor 3\n",
+        "\n",
+        "angka = float(input(\"Masukkan angka: \"))\n",
+        "if angka > 0:\n",
+        "    print(\"Angka positif\")\n",
+        "elif angka < 0:\n",
+        "    print(\"Angka negatif\")\n",
+        "else:\n",
+        "    print(\"Angka nol\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RK8QrHJrRclM",
+        "outputId": "31ab655b-996b-4b62-81a4-9175710e58a2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan angka: 0\n",
+            "Angka nol\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# latihan nomor 4\n",
+        "\n",
+        "bulan = int(input(\"Masukkan angka bulan (1-12): \"))\n",
+        "if bulan == 1:\n",
+        "    print(\"Januari\")\n",
+        "elif bulan == 2:\n",
+        "    print(\"Februari\")\n",
+        "elif bulan == 3:\n",
+        "    print(\"Maret\")\n",
+        "elif bulan == 4:\n",
+        "    print(\"April\")\n",
+        "elif bulan == 5:\n",
+        "    print(\"Mei\")\n",
+        "elif bulan == 6:\n",
+        "    print(\"Juni\")\n",
+        "elif bulan == 7:\n",
+        "    print(\"Juli\")\n",
+        "elif bulan == 8:\n",
+        "    print(\"Agustus\")\n",
+        "elif bulan == 9:\n",
+        "    print(\"September\")\n",
+        "elif bulan == 10:\n",
+        "    print(\"Oktober\")\n",
+        "elif bulan == 11:\n",
+        "    print(\"November\")\n",
+        "elif bulan == 12:\n",
+        "    print(\"Desember\")\n",
+        "else:\n",
+        "    print(\"Input salah\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "v1DnEI7rRpsy",
+        "outputId": "e72a1a2a-64e8-4ceb-fa7f-bb839226668f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan angka bulan (1-12): 22\n",
+            "Input salah\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# latihan nomor 5\n",
+        "\n",
+        "jam = int(input(\"Masukkan jam (0-23): \"))\n",
+        "if 0 <= jam <= 11:\n",
+        "    print(\"Selamat Pagi\")\n",
+        "elif 12 <= jam <= 15:\n",
+        "    print(\"Selamat Siang\")\n",
+        "elif 16 <= jam <= 18:\n",
+        "    print(\"Selamat Sore\")\n",
+        "elif 19 <= jam <= 23:\n",
+        "    print(\"Selamat Malam\")\n",
+        "else:\n",
+        "    print(\"Input salah\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dgsyuQ08SHRU",
+        "outputId": "52d28093-fdc5-42c3-9a6e-df295a3b60d6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan jam (0-23): 26\n",
+            "Input salah\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# tugas\n",
+        "\n",
+        "print(\"=\"*30)\n",
+        "print(\"SELAMAT DATANG DI KAFE BOILED ONE\")\n",
+        "print(\"=\"*30)\n",
+        "print(\"Menu Makanan & Minuman:\")\n",
+        "print(\"1. Nasi Goreng Daging sapi    - Rp 30.000\")\n",
+        "print(\"2. Nasi Goreng Ayam           - Rp 20.000\")\n",
+        "print(\"3. Jus Alpukat                - Rp 10.000\")\n",
+        "print(\"4. Susu Protein               - Rp 10.000\")\n",
+        "print(\"=\"*30)\n",
+        "\n",
+        "pilihan_str = input(\"Silakan masukkan nomor pilihan Anda (1-4): \")\n",
+        "pilihan = int(pilihan_str)\n",
+        "nama_pesanan = \"\"\n",
+        "harga = 0\n",
+        "\n",
+        "if pilihan == 1:\n",
+        "    nama_pesanan = \"Nasi Goreng Daging Sapi\"\n",
+        "    harga = 30000\n",
+        "elif pilihan == 2:\n",
+        "    nama_pesanan = \"Nasi Goreng Ayam\"\n",
+        "    harga = 20000\n",
+        "elif pilihan == 3:\n",
+        "    nama_pesanan = \"Jus Alpukat\"\n",
+        "    harga = 10000\n",
+        "elif pilihan == 4:\n",
+        "    nama_pesanan = \"Susu protein\"\n",
+        "    harga = 10000\n",
+        "else:\n",
+        "    print(\"Pilihan tidak valid.\")\n",
+        "    exit()\n",
+        "\n",
+        "diskon = 0\n",
+        "if harga >= 30000:\n",
+        "    diskon = 0.7\n",
+        "elif harga >= 20000:\n",
+        "    diskon = 0.5\n",
+        "elif harga >= 10000:\n",
+        "    diskon = 0.3\n",
+        "\n",
+        "potongan = harga * diskon\n",
+        "total_bayar = harga - potongan\n",
+        "\n",
+        "print(f\"\\nPesanan Anda: {nama_pesanan}\")\n",
+        "print(f\"Harga Awal : Rp {harga}\")\n",
+        "print(f\"Diskon ({int(diskon*100)}%) : Rp {potongan}\")\n",
+        "print(f\"Total Bayar : Rp {total_bayar}\")\n",
+        "\n",
+        "uang_dibayar = int(input(f\"\\nMasukkan uang yang dibayarkan: Rp \"))\n",
+        "if uang_dibayar >= total_bayar:\n",
+        "    kembalian = uang_dibayar - total_bayar\n",
+        "    print(f\"Kembalian Anda: Rp {kembalian}\")\n",
+        "    print(\"Terima kasih telah berbelanja di Kafe boiled one!\")\n",
+        "else:\n",
+        "    kurang = total_bayar - uang_dibayar\n",
+        "    print(f\"Uang Anda kurang Rp {kurang}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sEBN8-bQSbCI",
+        "outputId": "62637570-b8ba-48cb-bcb4-a3158bea99c2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "==============================\n",
+            "SELAMAT DATANG DI KAFE BOILED ONE\n",
+            "==============================\n",
+            "Menu Makanan & Minuman:\n",
+            "1. Nasi Goreng Daging sapi    - Rp 30.000\n",
+            "2. Nasi Goreng Ayam           - Rp 20.000\n",
+            "3. Jus Alpukat                - Rp 10.000\n",
+            "4. Susu Protein               - Rp 10.000\n",
+            "==============================\n",
+            "Silakan masukkan nomor pilihan Anda (1-4): 3\n",
+            "\n",
+            "Pesanan Anda: Jus Alpukat\n",
+            "Harga Awal : Rp 10000\n",
+            "Diskon (30%) : Rp 3000.0\n",
+            "Total Bayar : Rp 7000.0\n",
+            "\n",
+            "Masukkan uang yang dibayarkan: Rp 10000\n",
+            "Kembalian Anda: Rp 3000.0\n",
+            "Terima kasih telah berbelanja di Kafe boiled one!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
