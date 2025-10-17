@@ -1,0 +1,290 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOYm0/IurPcMdHJuQeLVy6M",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/WahyuMuhammadFaqih/Pemograman-dasar-/blob/main/Pertemuan%2006\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "7kZsOwVNu25Z"
+      },
+      "outputs": [],
+      "source": [
+        "# sintaks yang mendefinisikan fungsi pada pyton\n",
+        "def nama_fungsi(parameter1, parameter2):\n",
+        "    # blok kode\n",
+        "    return hasil"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh sederhana sintaks pyton\n",
+        "def tambah(a, b):\n",
+        "    return a + b\n",
+        "\n",
+        "print(tambah(10, 12))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Nyyyi07SXRvF",
+        "outputId": "81a3b611-d548-40f1-fa5b-fde8d54b44ab"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "22\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# contoh sederhana penerapan fungsi\n",
+        "def sambut_pengguna(nama):\n",
+        "    print(f\"Halo, {nama}! Selamat datang di kelas pemograman dasar.\")\n",
+        "\n",
+        "sambut_pengguna(\"Wahyu\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0G1dHNixZw_P",
+        "outputId": "a0c485cf-d328-4e44-f128-57ad1562556e"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Halo, Wahyu! Selamat datang di kelas pemograman dasar.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# percabangan dalam fungsi\n",
+        "def cek_nilai(nilai):\n",
+        "    if nilai >= 80:\n",
+        "        return \"A\"\n",
+        "    elif nilai >= 70:\n",
+        "        return \"B\"\n",
+        "    elif nilai >= 60:\n",
+        "        return \"C\"\n",
+        "    else:\n",
+        "        return \"Tidak Lulus\"\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "id": "lM6ud_NodXmv"
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# percabangan dalam fungsi\n",
+        "def cek_nilai(nilai):\n",
+        "    if nilai >= 85:\n",
+        "        return \"A\"\n",
+        "    elif nilai >= 75:\n",
+        "        return \"B\"\n",
+        "    elif nilai >= 65:\n",
+        "        return \"C\"\n",
+        "    else:\n",
+        "        return \"Tidak Lulus\"\n",
+        "\n",
+        "# Bagian Output\n",
+        "nilai_input = int(input(\"Masukkan nilai Anda: \"))\n",
+        "\n",
+        "hasil = cek_nilai(nilai_input)\n",
+        "\n",
+        "print(f\"Nilai Anda adalah {nilai_input} dan predikat Anda: {hasil}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JYzh_zQHeh_i",
+        "outputId": "9700bbf1-6977-4256-a468-23d8b11bca39"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan nilai Anda: 60\n",
+            "Nilai Anda adalah 60 dan predikat Anda: Tidak Lulus\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# perulangan dalam fungsi\n",
+        "\n",
+        "# Fungsi untuk mencetak nama sebanyak jumlah yang ditentukan (for loop)\n",
+        "def cetak_nama(nama, jumlah):\n",
+        "    for i in range(jumlah):\n",
+        "        print(f\"{i+1}. {nama}\")\n",
+        "\n",
+        "# Fungsi untuk menghitung mundur dari angka tertentu (while loop)\n",
+        "def hitung_mundur(n):\n",
+        "    while n > 0:\n",
+        "        print(n)\n",
+        "        n -= 1\n",
+        "    print(\"Selesai menghitung mundur!\")\n",
+        "\n",
+        "# Bagian Output Program\n",
+        "\n",
+        "# Input untuk fungsi cetak_nama\n",
+        "nama_input = input(\"Masukkan nama yang ingin dicetak: \")\n",
+        "jumlah_input = int(input(\"Masukkan berapa kali nama ingin dicetak: \"))\n",
+        "\n",
+        "# Memanggil fungsi cetak_nama\n",
+        "print(\"\\n== Hasil Cetak Nama ==\")\n",
+        "cetak_nama(nama_input, jumlah_input)\n",
+        "\n",
+        "# Input untuk fungsi hitung_mundur\n",
+        "angka_input = int(input(\"\\nMasukkan angka untuk mulai hitung mundur: \"))\n",
+        "\n",
+        "# Memanggil fungsi hitung_mundur\n",
+        "print(\"\\n== Hasil Hitung Mundur ==\")\n",
+        "hitung_mundur(angka_input)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OO58jvBbhOzc",
+        "outputId": "17d5cbed-2ba8-445b-ef73-1fcd5524aaff"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Masukkan nama yang ingin dicetak: wahyu \n",
+            "Masukkan berapa kali nama ingin dicetak: 2\n",
+            "\n",
+            "== Hasil Cetak Nama ==\n",
+            "1. wahyu \n",
+            "2. wahyu \n",
+            "\n",
+            "Masukkan angka untuk mulai hitung mundur: 4\n",
+            "\n",
+            "== Hasil Hitung Mundur ==\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "Selesai menghitung mundur!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Contoh fungsi lengkap buatan sendiri\n",
+        "def analisa_data(daftar_nilai):\n",
+        "    # Tipe data non primitif\n",
+        "    data_tuple = tuple(daftar_nilai)\n",
+        "    data_set = set(daftar_nilai)\n",
+        "    data_dict = {\"jumlah\": len(daftar_nilai), \"unik\": len(data_set)}\n",
+        "\n",
+        "    # Tipe data primitif\n",
+        "    total = 0\n",
+        "    lulus = True\n",
+        "\n",
+        "    # Perulangan\n",
+        "    for nilai in daftar_nilai:\n",
+        "        total += nilai\n",
+        "\n",
+        "    rata_rata = total / len(daftar_nilai)\n",
+        "\n",
+        "    # Percabangan\n",
+        "    if rata_rata >= 80:\n",
+        "        status = \"Lulus\"\n",
+        "    elif rata_rata >= 65:\n",
+        "        status = \"Remedial\"\n",
+        "        lulus = False\n",
+        "    else:\n",
+        "        status = \"Tidak Lulus\"\n",
+        "        lulus = False\n",
+        "\n",
+        "    print(f\"Tuple: {data_tuple}\")\n",
+        "    print(f\"Set unik: {data_set}\")\n",
+        "    print(f\"Dictionary: {data_dict}\")\n",
+        "    print(f\"Rata-rata nilai: {rata_rata}\")\n",
+        "    print(f\"Status: {status}\")\n",
+        "    print(f\"Lulus? {lulus}\")\n",
+        "\n",
+        "# Pemanggilan fungsi\n",
+        "nilai_siswa = [95, 75, 85, 60, 80]\n",
+        "analisa_data(nilai_siswa)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "90Xz7SIEnePQ",
+        "outputId": "3d62ea64-effa-46b8-8e81-8fd5c8180521"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tuple: (95, 75, 85, 60, 80)\n",
+            "Set unik: {75, 80, 85, 60, 95}\n",
+            "Dictionary: {'jumlah': 5, 'unik': 5}\n",
+            "Rata-rata nilai: 79.0\n",
+            "Status: Remedial\n",
+            "Lulus? False\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
