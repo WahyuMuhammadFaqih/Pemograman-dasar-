@@ -1,0 +1,420 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/WahyuMuhammadFaqih/Pemograman-dasar-/blob/main/Ats_Pemograman_Dasar_Kelompok_4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "id": "nh7jjQdKw4vL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2e4f9223-5202-4772-d76b-79203062e1d8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== PEMANTAUAN SUHU AIR PENDINGIN ===\n",
+            "Masukkan suhu air pendingin (°C): 80\n",
+            "STATUS: Normal\n",
+            "Pemeriksaan suhu selesai.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# soal nomor 1\n",
+        "\n",
+        "print(\"=== PEMANTAUAN SUHU AIR PENDINGIN ===\")\n",
+        "# Meminta input suhu dari pengguna (dalam derajat Celsius)\n",
+        "suhu = float(input(\"Masukkan suhu air pendingin (°C): \"))\n",
+        "\n",
+        "# Mengecek kondisi suhu menggunakan percabangan if-elif-else\n",
+        "if suhu <= 90:\n",
+        "    print(\"STATUS: Normal\")\n",
+        "elif suhu > 90 and suhu < 100:\n",
+        "    print(\"STATUS: Warning\")\n",
+        "else:\n",
+        "    print(\"ALERT: SHUTDOWN\")\n",
+        "\n",
+        "print(\"Pemeriksaan suhu selesai.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DhNrm5xyIT2g"
+      },
+      "source": [
+        "Program ini digunakan untuk memantau suhu air pendingin pada sistem pembangkit dengan menggunakan percabangan if, elif, dan else. Pengguna diminta memasukkan suhu dalam derajat Celsius, lalu program akan menentukan statusnya berdasarkan nilai tersebut. Jika suhu kurang dari atau sama dengan 90°C maka ditampilkan “STATUS: Normal”, jika suhu berada di atas 90°C namun di bawah 100°C maka muncul “STATUS: Warning”, dan jika suhu mencapai atau melebihi 100°C maka muncul “ALERT: SHUTDOWN”. Dengan cara ini, kondisi suhu sistem dapat diketahui untuk mencegah terjadinya overheating."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "id": "O_JVoY7J276D",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "178924b3-3d91-4a76-d4c9-50db65472229"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== PEMERIKSAAN VIBRASI MESIN ===\n",
+            "Data vibrasi tiap unit: [1.2, 0.9, 2.5, 3.1, 1.8]\n",
+            "Unit 1 aman. (Nilai: 1.2)\n",
+            "Unit 2 aman. (Nilai: 0.9)\n",
+            "Warning: Unit 3 vibrasi tinggi! (Nilai: 2.5)\n",
+            "Warning: Unit 4 vibrasi tinggi! (Nilai: 3.1)\n",
+            "Unit 5 aman. (Nilai: 1.8)\n",
+            "Pemeriksaan vibrasi selesai.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# soal nomor 3\n",
+        "\n",
+        "print(\"=== PEMERIKSAAN VIBRASI MESIN ===\")\n",
+        "# Data hasil pembacaan vibrasi dari 5 unit mesin\n",
+        "vibrasi_mesin = [1.2, 0.9, 2.5, 3.1, 1.8]\n",
+        "\n",
+        "# Menampilkan daftar data awal\n",
+        "print(\"Data vibrasi tiap unit:\", vibrasi_mesin)\n",
+        "\n",
+        "# Mengecek setiap nilai dalam list menggunakan perulangan for\n",
+        "for i in range(len(vibrasi_mesin)):\n",
+        "    nilai_vibrasi = vibrasi_mesin[i]\n",
+        "    if nilai_vibrasi > 2.0:\n",
+        "        print(f\"Warning: Unit {i+1} vibrasi tinggi! (Nilai: {nilai_vibrasi})\")\n",
+        "    else:\n",
+        "        print(f\"Unit {i+1} aman. (Nilai: {nilai_vibrasi})\")\n",
+        "\n",
+        "print(\"Pemeriksaan vibrasi selesai.\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "KDFPLV-jIivO"
+      },
+      "source": [
+        "Program ini digunakan untuk memeriksa tingkat getaran dari lima unit mesin menggunakan perulangan for. Data getaran setiap mesin disimpan dalam list vibrasi_mesin, lalu program memeriksa setiap nilai satu per satu. Jika nilai getaran suatu unit lebih besar dari 2.0, maka program akan menampilkan pesan “Warning: Unit [nomor_unit] vibrasi tinggi!”, sedangkan jika nilainya 2.0 atau kurang maka akan muncul pesan bahwa unit tersebut aman. Nomor unit dihitung mulai dari 1 agar sesuai urutan mesin sebenarnya. Program ini membantu mendeteksi mesin dengan getaran berlebih agar dapat dilakukan pengecekan lebih lanjut."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G2yv29Hz3BKD",
+        "outputId": "a72b5d59-8499-4127-f7ab-745e76c11c34"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== SISTEM PEMANAS ===\n",
+            "Proses pemanasan dimulai dari suhu awal: 60°C\n",
+            "Suhu target: 85°C\n",
+            "Kenaikan suhu: 5°C\n",
+            "------------------------------\n",
+            "Suhu saat ini: 65°C\n",
+            "Suhu saat ini: 70°C\n",
+            "Suhu saat ini: 75°C\n",
+            "Suhu saat ini: 80°C\n",
+            "Suhu saat ini: 85°C\n",
+            "------------------------------\n",
+            "Pemanasan Selesai suhu target 85°C telah tercapai.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# soal nomor 5\n",
+        "\n",
+        "print(\"=== SISTEM PEMANAS ===\")\n",
+        "# Inisialisasi variabel\n",
+        "suhu_target = 85\n",
+        "suhu_saat_ini = 60\n",
+        "kenaikan_suhu = 5\n",
+        "\n",
+        "# Tampilkan informasi awal\n",
+        "print(f\"Proses pemanasan dimulai dari suhu awal: {suhu_saat_ini}°C\")\n",
+        "print(f\"Suhu target: {suhu_target}°C\")\n",
+        "print(f\"Kenaikan suhu: {kenaikan_suhu}°C\")\n",
+        "print(\"------------------------------\")\n",
+        "\n",
+        "# Proses pemanasan: suhu akan naik hingga mencapai target\n",
+        "while suhu_saat_ini < suhu_target:\n",
+        "    suhu_saat_ini += kenaikan_suhu\n",
+        "    if suhu_saat_ini > suhu_target:\n",
+        "        suhu_saat_ini = suhu_target\n",
+        "\n",
+        "    print(f\"Suhu saat ini: {suhu_saat_ini}°C\")\n",
+        "\n",
+        "# Pemanasan selesai\n",
+        "print(\"------------------------------\")\n",
+        "print(\"Pemanasan Selesai suhu target 85°C telah tercapai.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Program ini akan mensimulasikan pemanasan dari suhu awal hingga mencapai suhu target tertentu. Program dimulai dengan menginisialisasi tiga variabel utama, yaitu suhu_target untuk menentukan suhu akhir yang ingin dicapai, suhu_saat_ini sebagai suhu awal, dan kenaikan_suhu sebagai besarnya kenaikan suhu tiap iterasi. Program kemudian menampilkan informasi awal mengenai suhu mulai, target, dan kenaikan suhu. Selanjutnya, program menggunakan perulangan while yang berjalan selama suhu saat ini masih di bawah suhu target. Di dalam perulangan, suhu saat ini bertambah sesuai dengan nilai kenaikan_suhu, dan jika kenaikan tersebut membuat suhu melebihi target, suhu akan disesuaikan agar tepat sama dengan target. Setiap langkah kenaikan suhu dicetak ke layar sehingga terlihat proses pemanasan secara bertahap. Setelah suhu mencapai target, program keluar dari perulangan dan menampilkan pesan bahwa pemanasan telah selesai. Program ini menghasilkan simulasi kenaikan suhu secara bertahap dari awal hingga target, sehingga dapat digunakan untuk memantau proses pemanasan atau sistem kontrol suhu sederhana. Bagian penting dari kode ini adalah inisialisasi variabel untuk menentukan kondisi awal dan target, perulangan while untuk menjalankan proses kenaikan suhu, kondisi if untuk memastikan suhu tidak melebihi target, serta perintah print untuk menampilkan status suhu saat ini dan pesan akhir.\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "55dF6QWIoYlm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mzruIFwy-Vj5",
+        "outputId": "a3f6ed88-5ed1-49cf-f922-5aa355010a85"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== KLASIFIKASI BEBAN LISTRIK ===\n",
+            "Masukkan kapasitas maksimum (Watt): 60\n",
+            "Masukkan beban terpakai (Watt): 60\n",
+            "Persentase pemakaian: 100.00%\n",
+            "Status beban: Beban Berat\n"
+          ]
+        }
+      ],
+      "source": [
+        "# soal nomor 7\n",
+        "\n",
+        "print(\"=== KLASIFIKASI BEBAN LISTRIK ===\")\n",
+        "# Input dari pengguna\n",
+        "kapasitas_maks = float(input(\"Masukkan kapasitas maksimum (Watt): \"))\n",
+        "beban_terpakai = float(input(\"Masukkan beban terpakai (Watt): \"))\n",
+        "\n",
+        "# Hitung persentase pemakaian\n",
+        "persentase = (beban_terpakai / kapasitas_maks) * 100\n",
+        "\n",
+        "# Klasifikasi berdasarkan persentase\n",
+        "if persentase <= 60:\n",
+        "    status = \"Beban Ringan\"\n",
+        "elif persentase <= 85:\n",
+        "    status = \"Beban Sedang\"\n",
+        "else:\n",
+        "    status = \"Beban Berat\"\n",
+        "\n",
+        "# Tampilkan hasil\n",
+        "print(f\"Persentase pemakaian: {persentase:.2f}%\")\n",
+        "print(\"Status beban:\", status)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Program ini akan mengklasifikasikan beban listrik berdasarkan kapasitas maksimum yang tersedia dan jumlah beban yang sedang digunakan. Program dimulai dengan meminta input dari pengguna berupa kapasitas_maks (kapasitas maksimum dalam Watt) dan beban_terpakai (beban yang sedang digunakan dalam Watt). Selanjutnya, program menghitung persentase pemakaian dengan rumus (beban_terpakai / kapasitas_maks) * 100. Berdasarkan persentase ini, program menentukan status beban listrik menggunakan percabangan if-elif-else: jika persentase ≤ 60%, beban dikategorikan sebagai “Beban Ringan”; jika persentase > 60% sampai ≤ 85%, dikategorikan “Beban Sedang”; dan jika persentase > 85%, dikategorikan “Beban Berat”. Terakhir, program menampilkan persentase pemakaian dengan format dua desimal dan status beban yang sesuai. Program ini membantu mengetahui sejauh mana kapasitas listrik digunakan, sehingga pengguna dapat mencegah overloading atau beban berlebih pada sistem listrik"
+      ],
+      "metadata": {
+        "id": "Up1whl2yglgk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T-t_9lv-Q5lW",
+        "outputId": "a31de631-6691-4f39-9a34-45342cec8bab"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "=== SUHU BOILER ===\n",
+            "Suhu saat ini: 92.5 °C\n",
+            "Suhu saat ini: 88.7 °C\n",
+            "Suhu saat ini: 95.1 °C\n",
+            "Suhu saat ini: 102.3 °C\n",
+            "WARNING: Suhu melebihi batas aman (100°C)!\n",
+            "Suhu saat ini: 97.8 °C\n"
+          ]
+        }
+      ],
+      "source": [
+        "# soal nomor 9\n",
+        "\n",
+        "print(\"=== SUHU BOILER ===\")\n",
+        "suhu_boiler = [92.5, 88.7, 95.1, 102.3, 97.8]\n",
+        "\n",
+        "# Loop for untuk menelusuri setiap suhu\n",
+        "for suhu in suhu_boiler:\n",
+        "    print(\"Suhu saat ini:\", suhu, \"°C\")\n",
+        "\n",
+        "    # Peringatan jika suhu melebihi 100°C\n",
+        "    if suhu > 100:\n",
+        "        print(\"WARNING: Suhu melebihi batas aman (100°C)!\")\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "A1lEiSdgRYYj"
+      },
+      "source": [
+        "Kode program menggunakan tipe data List yang berisi beberapa nilai suhu yang bisa diakses satu per satu menggunakan loop for. Loop for yaitu perulangan pada python untuk mengambil setiap nilai dalam list suhu_boiler secara berurutan yang disimpan sementara dalam variabel suhu. Setiap eleme dalam list yaitu [92.5, 88.7, 95.1, 102.3, 97.8] merupakan tipe data Float karena suhu nya bernilai desimal. pada if suhu > 100 termasuk jenis operator perbandinga yaitu lebih besar dari.Program ini menampilkan setiap hasil pembacaan suhu dan secara otomatis memberikan peringatan ketika suhu melebihi batas aman 100°C. Dengan begitu, program ini dapat membantu memantau kondisi boiler secara langsung agar tetap berada pada tingkat suhu yang aman."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y5s3nS_a3F6D",
+        "outputId": "28c8d8f1-b1d5-4d57-e340-332a5e5765b8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Masukkan data pemakaian listrik (dalam kWh)\n",
+            "Masukkan pemakaian tiap bulan (pisahkan dengan spasi):  25\n",
+            "Masukkan tarif dasar per kWh (Rp): 1.697\n",
+            "Masukkan target total konsumsi (kWh): 20\n",
+            "\n",
+            "--- Estimasi Biaya Energi Listrik ---\n",
+            "Total Pemakaian: 25.00 kWh\n",
+            "Biaya Dasar (sebelum penyesuaian): Rp 42\n",
+            " Penalti Surplus Konsumsi (5.00 kWh): +Rp 250\n",
+            "------------------------------------\n",
+            "Total Biaya Listrik Akhir: Rp 292\n",
+            "------------------------------------\n",
+            "\n",
+            "Apakah ingin menghitung lagi? (y/n): n\n",
+            "\n",
+            "Terima kasih! Perhitungan listrik selesai dijalankan \n"
+          ]
+        }
+      ],
+      "source": [
+        "# Challenge\n",
+        "\n",
+        "# Fungsi untuk menghitung biaya listrik\n",
+        "def hitung_biaya_listrik(pemakaian_bulanan, tarif_dasar_per_kwh, target_kwh):\n",
+        "    \"\"\"\n",
+        "    Menghitung total biaya listrik, termasuk penalti dan diskon.\n",
+        "    \"\"\"\n",
+        "    print(\"\\n--- Estimasi Biaya Energi Listrik ---\")\n",
+        "\n",
+        "    # 1. Loop FOR untuk menghitung total pemakaian listrik\n",
+        "    total_pemakaian_kwh = 0\n",
+        "    for pemakaian in pemakaian_bulanan:\n",
+        "        total_pemakaian_kwh += pemakaian  # jumlahkan semua data pemakaian\n",
+        "\n",
+        "    # 2. Hitung biaya dasar\n",
+        "    biaya_dasar = total_pemakaian_kwh * tarif_dasar_per_kwh\n",
+        "    selisih_kwh = total_pemakaian_kwh - target_kwh\n",
+        "    total_biaya = biaya_dasar\n",
+        "\n",
+        "    # 3. Tampilkan hasil sementara\n",
+        "    print(f\"Total Pemakaian: {total_pemakaian_kwh:.2f} kWh\")\n",
+        "    print(f\"Biaya Dasar (sebelum penyesuaian): Rp {biaya_dasar:,.0f}\")\n",
+        "\n",
+        "    # 4. Percabangan if/elif/else untuk penalti/diskon\n",
+        "    if selisih_kwh > 0:\n",
+        "        denda = selisih_kwh * 50\n",
+        "        total_biaya += denda\n",
+        "        print(f\" Penalti Surplus Konsumsi ({selisih_kwh:.2f} kWh): +Rp {denda:,.0f}\")\n",
+        "    elif selisih_kwh < 0:\n",
+        "        diskon = abs(selisih_kwh) * 75\n",
+        "        total_biaya -= diskon\n",
+        "        print(f\" Diskon Hemat Energi ({abs(selisih_kwh):.2f} kWh): -Rp {diskon:,.0f}\")\n",
+        "    else:\n",
+        "        print(\" Konsumsi tepat sasaran, tidak ada penalti atau diskon.\")\n",
+        "\n",
+        "    # 5. Tampilkan hasil akhir\n",
+        "    print(\"------------------------------------\")\n",
+        "    print(f\"Total Biaya Listrik Akhir: Rp {total_biaya:,.0f}\")\n",
+        "    print(\"------------------------------------\")\n",
+        "\n",
+        "    return total_biaya\n",
+        "\n",
+        "\n",
+        "# ====== LOOP WHILE untuk mengulangi program ======\n",
+        "lanjut = \"y\"\n",
+        "while lanjut.lower() == \"y\":\n",
+        "    print(\"\\nMasukkan data pemakaian listrik (dalam kWh)\")\n",
+        "    try:\n",
+        "        # Input data pemakaian dalam bentuk list\n",
+        "        pemakaian_input = input(\"Masukkan pemakaian tiap bulan (pisahkan dengan spasi): \")\n",
+        "        pemakaian_kwh = [float(x) for x in pemakaian_input.split()]\n",
+        "\n",
+        "        TARIF = float(input(\"Masukkan tarif dasar per kWh (Rp): \"))\n",
+        "        TARGET = float(input(\"Masukkan target total konsumsi (kWh): \"))\n",
+        "\n",
+        "        # Panggil fungsi hitung biaya listrik\n",
+        "        hitung_biaya_listrik(pemakaian_kwh, TARIF, TARGET)\n",
+        "\n",
+        "    except ValueError:\n",
+        "        print(\" Input tidak valid! Pastikan semua data berupa angka.\")\n",
+        "\n",
+        "    # Tanya apakah ingin menghitung lagi\n",
+        "    lanjut = input(\"\\nApakah ingin menghitung lagi? (y/n): \")\n",
+        "print(\"\\nTerima kasih! Perhitungan listrik selesai dijalankan \")\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "K1En9EHUqa67"
+      },
+      "source": [
+        "Pada program ini menggunakan beberapa percabangan if,else,elif, perulangan for,while, dan Fungsi Function(). Pada kode program diatas menggunakan def untuk mendefinisikan fungsi variabel yaitu hitung_biaya listrik. Fungsi ini bertujuan untuk menghitung total biaya listrik berdasarkan pemakaian konsumen. Parameter input yang digunakan ada pemakaian_bulanan bertipe data list yang berisi angka bertipe data integer. Pada tarif_dasar_per_kwh dan targer_kwh menggunakan tipe data float.Menggunakan Perulangan Loop for untuk menelusuri dan menghitung total pemakaian setiap nilai dalam list, setiap nilai pemakaian dijumlahkan ke variabel. Menggunakan perbandingan > < untuk mengecek kondisi dan += , -+ untuk menambahkan atau menguranilai nilai pada variabel. Menggunakan percabangan if untuk mengecek pemakaian lebih besar dari target untuk dikenakan penalti, elif jika pemakaian lebih kecil dari target akan mendapatkan diskon dan else jika pemakaian sama dengan target tidak ada perubahan biaya. Output print digunakan untuk menampilkan hasil ke layar , dan f-string digunakan untuk memasukkan variabel langsung ke teks. Serta return digunakan untuk mengembalikan nilai total biaya agar dapat digunakan kembali.\n"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
